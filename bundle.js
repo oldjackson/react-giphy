@@ -34011,7 +34011,7 @@ var container = document.getElementById('root');
 if (container) {
   var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_2__.createRoot)(container);
   root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Hello, {
-    name: " World"
+    name: " Wurld"
   }));
 }
 })();
