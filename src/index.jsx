@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import '../assets/stylesheets/application.scss';
 
-const Hello = ({ name }) => {
+function Hello({ name }) {
   return (
     <div>
       Hello,
       {name}
     </div>
   );
-};
+}
 
-const root = document.getElementById('root');
-if (root) {
-  ReactDOM.render(<Hello name="World" />, root);
+const container = document.getElementById('root');
+if (container) {
+  const root = createRoot(container);
+  root.render(<Hello name=" World" />);
 }
