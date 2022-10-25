@@ -33,16 +33,13 @@ class StatefulHello extends Component {
     const { clicked, counter } = this.state;
 
     return (
-      <h1
+      <input
+        // style="width:100%; height:30px; font-size:30px"
+        type="text"
         className={`${clicked ? "clicked" : ""} padded`}
         onClick={this.handleClick}
-      >
-        Hello,
-        {' '}
-        {name}
-        {' '}
-        {counter}
-      </h1>
+        value={`Hello, ${name} ${counter}`}
+      />
     );
   }
 }

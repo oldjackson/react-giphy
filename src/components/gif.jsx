@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
 class Gif extends Component {
+  handleClick = () => {
+    const { id, setGifFunction } = this.props;
+
+    setGifFunction(id);
+  };
+
   computeSrc() {
     const { id } = this.props;
     return `https://media.giphy.com/media/${id}/giphy.gif`;
@@ -8,7 +14,7 @@ class Gif extends Component {
 
   render() {
     return (
-      <img src={this.computeSrc()} alt="" className="gif" />
+      <input type="image" onClick={this.handleClick} src={this.computeSrc()} alt="" className="gif" />
     );
   }
 }
