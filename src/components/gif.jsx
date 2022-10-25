@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 
 class Gif extends Component {
+  computeSrc() {
+    const { id } = this.props;
+    return `https://media.giphy.com/media/${id}/giphy.gif`;
+  }
+
   render() {
-    const src = `https://media.giphy.com/media/${this.props.id}/giphy.gif`;
     return (
-      <img src={src} alt="" className="gif" />
+      <img src={this.computeSrc()} alt="" className="gif" />
     );
   }
 }

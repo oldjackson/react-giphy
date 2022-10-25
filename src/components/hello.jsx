@@ -20,23 +20,28 @@ class StatefulHello extends Component {
   }
 
   handleClick = () => {
+    const { clicked, counter } = this.state;
+
     this.setState({
-      clicked: !this.state.clicked,
-      counter: this.state.counter + 1
+      clicked: !clicked,
+      counter: counter + 1
     });
   };
 
   render() {
+    const { name } = this.props;
+    const { clicked, counter } = this.state;
+
     return (
       <h1
-        className={`${this.state.clicked ? "clicked" : ""} padded`}
+        className={`${clicked ? "clicked" : ""} padded`}
         onClick={this.handleClick}
       >
         Hello,
         {' '}
-        {this.props.name}
+        {name}
         {' '}
-        {this.state.counter}
+        {counter}
       </h1>
     );
   }
