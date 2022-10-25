@@ -11,5 +11,8 @@
   },
   "env": {
     "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest"
   }
 }
