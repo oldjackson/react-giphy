@@ -12,7 +12,10 @@ class App extends Component {
       gifs: [],
       selectedGif: "QPQ3xlJhqR1BXl89RG",
     };
-    this.giphyClient = giphy('IxTVuLah0xVfoDMT6MJqPRmG6qhWtrGB');
+    this.giphyClient = giphy({
+      apiKey: 'IxTVuLah0xVfoDMT6MJqPRmG6qhWtrGB',
+      https: true
+    });
   }
 
   search = (query) => {
