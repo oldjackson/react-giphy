@@ -1,4 +1,4 @@
-#root > div {
+#root>div {
   display: flex;
   height: 100vh;
 }
@@ -14,9 +14,16 @@
     border: none;
     font-size: 2.6em;
     box-shadow: none;
+
     &:focus {
       box-shadow: none;
     }
+  }
+
+  .highlighted {
+    border-color: red;
+    border-width: 2px;
+    border-style: solid;
   }
 
   &:before {
