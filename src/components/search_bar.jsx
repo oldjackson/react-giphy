@@ -6,6 +6,11 @@ class SearchBar extends Component {
     this.state = { highlighted: false };
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    const { highlighted } = this.state;
+    return highlighted !== nextState.highlighted;
+  }
+
   handleInput = (event) => {
     const { searchFunction } = this.props;
 
